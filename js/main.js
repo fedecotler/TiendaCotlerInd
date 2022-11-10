@@ -1,4 +1,17 @@
-// variables
+
+function iniciarMap(){
+    var coord = {lat:-34.5868388 ,lng: -58.4275246};
+    var map = new google.maps.Map(document.getElementById('map'),{
+      zoom: 10,
+      center: coord
+    });
+    var marker = new google.maps.Marker({
+      position: coord,
+      map: map
+    });
+}
+
+
 
 const clickButton = document.querySelectorAll(".button")
 const tbody = document.querySelector(".tbody")
@@ -11,7 +24,7 @@ clickButton.forEach(btn => {
 })
 
 
-//Funciones
+
 
 function addToCarrito(e) {
     const button = e.target
@@ -148,3 +161,4 @@ window.onload = function(){
         renderCarrito()
     }
 }
+
